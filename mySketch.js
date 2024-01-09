@@ -192,7 +192,7 @@ function draw() {
   pop();
   fill(0);
   textAlign(LEFT);
-  text("Upload an image to get ideas!\nPress Generate to get different designs\nTry images with different saturation and lightness.\nRefresh webpage before uploading new images.\nUse the sliders to change the number of rounds.\n - Press 'S' to save pattern.\n",50, height/2 - 200);
+  text("Upload an image to get ideas!\nPress Generate to get different designs\nTry images with different saturation and lightness.\nRefresh webpage before uploading new images.\nUse the sliders to change the number of rounds.\n - Press 'S' to save pattern.\n",50, height/2 - 250);
   text("Color suggestions:", 60, height-135);
 
 }
@@ -311,13 +311,13 @@ function displayColorSquare(hue, saturation, lightness) {
 
   // Display color square
   fill(hsbColor);
-  rect(235, height-100, 50, 50); // You can adjust the size of the square
+  rect(320, height-80, 80, 80); // You can adjust the size of the square
   fill(hsbColor1);
-  rect(185, height-100, 50, 50);
+  rect(240, height-80, 80, 80);
   fill(hsbColor2);
-  rect(135, height-100, 50, 50);
+  rect(160, height-80, 80, 80);
   fill(hsbColor3);
-  rect(85, height-100, 50, 50);
+  rect(80, height-80, 80, 80);
   // Reset color mode to default (RGB)
   colorMode(RGB, 255);
 }
