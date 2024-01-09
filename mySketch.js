@@ -122,7 +122,7 @@ function draw() {
 
   rectMode(CENTER);
   fill(randomFill);
-  rect(150, 125, 200, 50); //generate button
+  rect(150, height/10, 200, 50); //generate button
 
 
   noStroke();
@@ -130,7 +130,7 @@ function draw() {
   textSize(20);
   textFont(font);
   fill(randomTextFill);
-  text("GENERATE", 150, 132); // buttons to control the output
+  text("GENERATE", 150, height/10+10); // buttons to control the output
 
   //slider
   stroke(0);
@@ -326,8 +326,8 @@ function displayColorSquare(hue, saturation, lightness) {
 function mousePressed() {
   checkHover();
   vectorLimiter();
-  
-  if (mouseX > 50 && mouseX < 250 && mouseY > 100 && mouseY < 150) { // randomize
+ 
+  if (mouseX > 50 && mouseX < 250 && mouseY > height/10 && mouseY < height/10+50) { // randomize
     randomize = true;
     randomFill = 0;
     randomTextFill = 255; 
