@@ -156,7 +156,7 @@ function draw() {
   // let hueAnalysis = analyzeHSL(img);
   // averageLightness = hueAnalysis.lightness.average;
   // let mappedInitStitchNum = int(map(averageLightness, 0, 100, 7, 3));
-
+  
   for (var i = 1; i <= n; i++) { // makes the rounds with invisible circles
     stitchInd = round(random(0, stitches.length - 1));
     basicStitchInd = round(random(0, basicStitches.length - 1));
@@ -167,15 +167,22 @@ function draw() {
       let hueAnalysis = analyzeHSL(img);
       averageSaturation = hueAnalysis.saturation.average;
   
-      chainRound = new CrochetRound(basicStitches[basicStitchInd], specialStitches[specialStitchInd]);
+      
+     
       if (averageSaturation <= 50) {
+        chainRound = new CrochetRound(stitches[stitchInd], stitches[stitchIndTwo]);
           chainRound.repeatAround(incNum, i * r);
           console.log('repeat');
       }  else {
+        chainRound = new CrochetRound(basicStitches[basicStitchInd], specialStitches[specialStitchInd]);
             chainRound.patternStitch(incNum, i * r);
+            
             console.log('pattern');
       }
       pattern = "Round " + i + ": " + incNum + " " + stitchNames[stitchInd] + " stitches\n";
+      if (averageSaturation >= 50) {
+        pattern = "Round " + i + ": " + incNum + " " + basicStitchesNames[basicStitchInd] + " " + "and" + " " + specialStitchesNames[specialStitchInd] + " stitches\n";}
+    
       fill(0);
       textAlign(LEFT);
       textSize(14);
