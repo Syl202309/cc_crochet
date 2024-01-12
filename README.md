@@ -1,5 +1,5 @@
 A crochet pattern generator based on user uploaded images
-Access via: https://syl202309.github.io/cc_crochet/
+n/Access via: https://syl202309.github.io/cc_crochet/
 
 
 Upload an image to get ideas!
